@@ -24,7 +24,7 @@ arr.map((tip) => {
 
 const people = document.querySelector(".people-no");
 
-people.addEventListener("change", (e) => {
+people.addEventListener("keyup", (e) => {
   const peopleNo = e.target.value;
   console.log(peopleNo);
   para.push(peopleNo);
