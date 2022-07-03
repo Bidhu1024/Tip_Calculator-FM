@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+main {
+  min-height: 100vh;
+  background-color: #c5e4e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+main .header {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .calculator {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem;
+  border-radius: 10px;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 700px) {
+  main .calculator {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+main .calculator .left {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 1rem;
+}
+
+main .calculator .left .bill-no {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 0.3rem;
+}
+
+main .calculator .left .bill-no .bill-text {
+  color: #5e7a7d;
+  font-size: 0.8rem;
+}
+
+main .calculator .left .bill-no .Bill-input {
+  background-color: #f4fafa;
+  padding: 0.4rem 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.7rem;
+  border-radius: 5px;
+}
+
+main .calculator .left .bill-no .Bill-input span {
+  color: #7f9c9f;
+}
+
+main .calculator .left .bill-no .Bill-input input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: inherit;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border: none;
+  text-align: right;
+  font-size: 1.2em;
+}
+
+main .calculator .left .bill-no .Bill-input input:focus {
+  border: none;
+  outline: none;
+}
+
+main .calculator .left .select-Tip {
+  margin: 1rem 0 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 0.3rem;
+}
+
+main .calculator .left .select-Tip span {
+  font-size: 0.8rem;
+  color: #5e7a7d;
+}
+
+main .calculator .left .select-Tip .tip-amount {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+main .calculator .left .select-Tip .tip-amount button {
+  cursor: pointer;
+  background-color: #00494d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+main .calculator .left .select-Tip .tip-amount button:hover {
+  background-color: #05e1c4;
+  color: #00494d;
+}
+
+main .calculator .left .select-Tip .tip-amount button:focus {
+  background-color: #f4fafa;
+  color: #5e7a7d;
+}
+
+main .calculator .left .People {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 0.3rem;
+}
+
+main .calculator .left .People span {
+  font-size: 0.8rem;
+  color: #5e7a7d;
+}
+
+main .calculator .left .People .people-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  background-color: #f4fafa;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+main .calculator .left .People .people-input input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: inherit;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border: none;
+  text-align: right;
+  font-size: 1.2em;
+}
+
+main .calculator .left .People .people-input input:focus {
+  border: none;
+  outline: none;
+}
+
+main .calculator .right {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  background-color: #00494d;
+  padding: 2rem;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+}
+
+main .calculator .right .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 1.5rem;
+}
+
+main .calculator .right .stats .Tip,
+main .calculator .right .stats .Total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+}
+
+main .calculator .right .stats .Tip h5,
+main .calculator .right .stats .Total h5 {
+  color: white;
+  font-size: 0.8rem;
+}
+
+main .calculator .right .stats .Tip h5 span,
+main .calculator .right .stats .Total h5 span {
+  display: block;
+  color: #7f9c9f;
+  font-size: 0.7rem;
+}
+
+main .calculator .right .stats .Tip h1,
+main .calculator .right .stats .Total h1 {
+  color: #05e1c4;
+  font-size: 2.3em;
+}
+
+main .calculator .right .Reset {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: #05e1c4;
+  color: #00494d;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+//| variables
+
+$strongcyan: hsl(172, 96%, 45%);
+$darkCyan: hsl(183, 100%, 15%);
+$darkGrayCyan: hsl(186, 14%, 43%);
+$grayCyan: hsl(184, 14%, 56%);
+$lightGrayCyan: hsl(185, 41%, 84%);
+$veryLightGrayCyan: hsl(189, 41%, 97%);
+
+main {
+  min-height: 100vh;
+  background-color: hsl(185, 41%, 84%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  @media screen and (max-width: 700px) {
+    justify-content: space-between;
+  }
+  .header {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .calculator {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 10px;
+    gap: 2rem;
+    @media screen and (max-width: 700px) {
+      flex-flow: column;
+      //   flex: 1;
+      border-radius: 20px 20px 0 0;
+    }
+    .left {
+      flex-basis: 50%;
+      display: flex;
+      flex-flow: column;
+      gap: 1rem;
+      //|   Bill
+      .bill-no {
+        display: flex;
+        flex-flow: column;
+        gap: 0.3rem;
+        .bill-text {
+          color: $darkGrayCyan;
+          font-size: 0.8rem;
+        }
+        .Bill-input {
+          background-color: $veryLightGrayCyan;
+          padding: 0.4rem 0.5rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 0.7rem;
+          border-radius: 5px;
+          span {
+            color: $grayCyan;
+          }
+          input {
+            flex: 1;
+            background-color: inherit;
+            width: max-content;
+            border: none;
+            text-align: right;
+            font-size: 1.2em;
+            &:focus {
+              border: none;
+              outline: none;
+            }
+          }
+        }
+      }
+
+      //| Tip
+      .select-Tip {
+        margin: 1rem 0 1.5rem;
+        display: flex;
+        flex-flow: column;
+        gap: 0.3rem;
+        span {
+          font-size: 0.8rem;
+          color: $darkGrayCyan;
+        }
+        .tip-amount {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+          button {
+            cursor: pointer;
+            background-color: $darkCyan;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            font-size: 1.3rem;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              background-color: $strongcyan;
+              color: $darkCyan;
+            }
+            &:focus {
+              background-color: $veryLightGrayCyan;
+              color: $darkGrayCyan;
+            }
+          }
+        }
+      }
+
+      //| People
+      .People {
+        display: flex;
+        flex-flow: column;
+        gap: 0.3rem;
+        span {
+          font-size: 0.8rem;
+          color: $darkGrayCyan;
+        }
+        .people-input {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 0.5rem;
+          background-color: $veryLightGrayCyan;
+          padding: 0.5rem;
+          border-radius: 5px;
+          input {
+            flex: 1;
+            background-color: inherit;
+            width: max-content;
+            border: none;
+            text-align: right;
+            font-size: 1.2em;
+            &:focus {
+              border: none;
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      flex-basis: 50%;
+      background-color: $darkCyan;
+      padding: 2rem;
+      border-radius: 10px;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      gap: 1rem;
+      .stats {
+        display: flex;
+        flex-flow: column;
+        gap: 1.5rem;
+        .Tip,
+        .Total {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 5rem;
+          h5 {
+            color: white;
+            font-size: 0.8rem;
+            span {
+              display: block;
+              color: $grayCyan;
+              font-size: 0.7rem;
+            }
+          }
+          h1 {
+            color: $strongcyan;
+            font-size: 2.3em;
+          }
+        }
+      }
+      .Reset {
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        background-color: $strongcyan;
+        color: $darkCyan;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- CSS Linked -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <img src="./images/logo.svg" alt="" />
+      </div>
+      <div class="calculator">
+        <div class="left">
+          <div class="bill-no">
+            <span class="bill-text">Bill</span>
+            <div class="Bill-input">
+              <img src="./images/icon-dollar.svg" alt="" />
+              <input
+              id="bill-amt"              
+                type="text"
+                name="Bill"
+                id="Bill"
+                value="0"
+                onkeypress="return getNumber(event)"
+              />
+            </div>
+          </div>
+          <!-- select Tip  -->
+          <div class="select-Tip">
+            <span>Select Tip %</span>
+            <div class="tip-amount">
+              <button class="tip-amt" value="5">5%</button>
+              <button class="tip-amt" value="10">10%</button>
+              <button class="tip-amt" value="15">15%</button>
+              <button class="tip-amt" value="25">25%</button>
+              <button class="tip-amt" value="50">50%</button>
+              <button class="tip-amt" value="">Custom</button>
+            </div>
+          </div>
+          <div class="People">
+            <span>Number of People</span>
+            <div class="people-input">
+              <img src="./images/icon-person.svg" alt="" />
+              <input
+              class="people-no"
+                type="text"
+                name="people"
+                value=""
+                onkeypress="return getNumber(event)"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="stats">
+            <div class="Tip">
+              <h5>Tip Amount <span>/ person</span></h5>
+              <h1 class="Tip-person"></h1>
+            </div>
+            <div class="Total">
+              <h5>Total <span>/ person</span></h5>
+              <h1 class="Tip-total">$32.79</h1>
+            </div>
+          </div>
+          <button class="Reset">RESET</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- JS Linked  -->
+    <script src="./script.js"></script>
+  </body>
+</html>
